@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <!-- <div class="logo">Suvidha</div> -->
+    <div class="logo">
+      <img src="suvidha-removebg-preview.png" alt="Suvidha Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <!-- <a href="#services">Services</a> -->
+      <!-- <a href="#how-it-works">How It Works</a> -->
+      <!-- <a href="#contact">Contact</a> -->
+      <a href="#blog">Blog</a>
+      <button class="cta-btn">Join the Waitlist</button>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Making Services Simple 
+        For Indians Abroad</h1>
+      <p>A seamless platform bridging NRIs and financial advisors for secure investments, banking, and wealth
+        management.</p>
+      <div class="hero-buttons">
+        <a href="#" class="cta-button">Get Started</a>
+        <a href="#" class="secondary-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="text">
+      <span>discover</span>
+      <h1>One-Stop Destination for</h1>
+      <hr>
+      <p>Beauty and mystery are hidden under the sea. Explore with our application to know about Aquatic Animals.</p>
+      <a href="about.html">know more</a>
+      <div class="button-container">
+        <button style="margin-left:20px; margin-top: 40px;" class="arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+        <button style="margin-left: 10px;" class="arrow" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+    </div>
+ 
+ 
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-top: 50px;
+            margin-right:0;
+        }
+
+        .conteudo {
+            width: 80%;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carrousel {
+            display: flex;
+            gap: 1.2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            padding: 10px;
+        }
+
+        .carrousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            scroll-snap-align: start;
+            border-radius: 20px;
+            min-height: 450px;
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: rgb(15, 166, 212);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: -40px;
+        }
+
+        .next {
+            right: -40px;
+        } */
+        .arrow {
+        /* margin: 20px; */
+        background-color: #e0e0e0;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: background 0.3s;
+    }
+
+    .arrow:hover {
+        background-color: #c0c0c0;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="conteudo">
+            <!-- <button class="arrow prev" onclick="scrollCarousel(-1)">&#10094;</button> -->
+            <div class="carrousel" id="carousel">
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>HTML</h1>
+                </article>
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>CSS</h1>
+                </article>
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>JS</h1>
+                </article>
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>React JS</h1>
+                </article>
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>NODE</h1>
+                </article>
+                <article class="card" onclick="scrollToCard(this)">
+                    <h1>VUE</h1>
+                </article>
+            </div>
+            <!-- <button class="arrow next" onclick="scrollCarousel(1)">&#10095;</button> -->
+        </div>
+      </div>
+        
+   
+
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById("carousel");
+            const cardWidth = document.querySelector(".card").offsetWidth + 20; // Include gap
+            carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
+
+        function scrollToCard(card) {
+            const carousel = document.getElementById("carousel");
+            const cardLeft = card.offsetLeft - carousel.offsetLeft;
+            carousel.scrollTo({ left: cardLeft, behavior: 'smooth' });
+        }
+    </script>
+  </main>
+  <style>@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+    
+    main {
+      position: relative;
+      width: calc(min(90rem, 90%));
+      margin: 0 auto;
+      min-height: 100vh;
+      column-gap: 3rem;
+      padding-block: min(20vh, 3rem);
+    }
+    
+    .bg {
+      position: fixed;
+      top: -4rem;
+      left: -12rem;
+      z-index: -1;
+      opacity: 0;
+    }
+    
+    .bg2 {
+      position: fixed;
+      bottom: -2rem;
+      right: -3rem;
+      z-index: -1;
+      width: 9.375rem;
+      opacity: 0;
+    }
+    main> .text{
+      max-width: 70%;
+    }
+    main > .text span {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      color: #717171;
+    }
+    
+    main > .text h1 {
+      text-transform: capitalize;
+      letter-spacing: 0.8px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+      background-color: #005baa;
+      background-image: linear-gradient(45deg, #005baa, #000000);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+    
+    main > .text hr {
+      display: block;
+      background: #005baa;
+      height: 0.25rem;
+      width: 6.25rem;
+      border: none;
+      margin: 1.125rem 0 1.875rem 0;
+    }
+    
+    main > .text p {
+      line-height: 1.6;
+    }
+    
+    main a {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #717171;
+      font-weight: 500;
+      background: #fff;
+      border-radius: 3.125rem;
+      transition: 0.3s ease-in-out;
+    }
+    
+    main > .text > a {
+      border: 2px solid #c2c2c2;
+      margin-top: 2.188rem;
+      padding: 0.625rem 1.875rem;
+    }
+    
+    main > .text > a:hover {
+      border: 0.125rem solid #005baa;
+      color: #005baa;
+    }
+    
+    
+    
+    @media screen and (min-width: 48rem) {
+      main {
+        display: flex;
+        align-items: center;
+        
+      }
+      .bg,
+      .bg2 {
+        opacity: 0.1;
+      }
+    }
+    </style>
+ 
+  
+
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

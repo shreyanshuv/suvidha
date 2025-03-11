@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+   
+  }
+  /* nav section */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #d5e4f4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ebeef2;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    position: relative;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #1c0303;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #0a4ec3;
+  }
+  
+  .cta-btn {
+    background: linear-gradient(135deg, #004AAD, #007BFF);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background: linear-gradient(135deg, #003A8C, #005FCC);
+    transform: scale(1.01);
+    box-shadow: 0px 6px 20px rgba(0, 91, 204, 0.7);
+  }
+  
+  /* Mobile Menu */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 5%;
+      background:#0A2540;
+      width: 200px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+    }
+    
+    .nav-links a {
+      padding: 10px;
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  .logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+  }
+  
+  /* hero section */
+ /* Hero Section */
+ .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    background: linear-gradient(135deg, #081C35, #0A2540, #004AAD);
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+  
+  
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    /* max-width: 800px; */
+  }
+  
+  .hero h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #7fa3d2;
+  }
+  
+  /* Hero Buttons */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Premium Get Started Button */
+  .cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    color: white;
+    background: linear-gradient(135deg, #153677, #1f4b99); /* Navy Blue Gradient */
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(192, 192, 192, 0.8); /* Silver Border */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background: linear-gradient(135deg, #1f4b99, #153677);
+    box-shadow: 0px 0px 15px rgba(192, 192, 192, 0.4);
+    transform: scale(1.05);
+  }
+  
+  
+  /* Premium Learn More Button */
+  .secondary-button {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .secondary-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    transform: scale(1.08);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .cta-button, .secondary-button { font-size: 1.1rem; padding: 14px 35px; }
+  }
+  
+  @media (max-width: 480px) {
+    .hero { height: 80vh; }
+    .hero h1 { font-size: 2rem; }
+    .hero-buttons { flex-direction: column; gap: 15px; }
+  }
+  

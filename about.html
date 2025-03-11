@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Suvidha</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif; */
+   
+  }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding:0px;
+            text-align: center;
+            background: linear-gradient(to right, #002244, #004488);
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+            position: relative;
+        }
+        .about-text, .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-img img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            border: 3px solid white;
+            transform: scaleX(-1);
+        }
+        .dotted-connection {
+            width: 100%;
+            height: 160px;
+            background: url('https://dyma.ai/img/line-connect2_ic.svg') no-repeat center;
+            background-size: contain;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            margin: 20px ;
+        }
+        .feature-box {
+            width: 30%;
+            padding: 20px;
+            border: 2px solid #0077b6;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: 400;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .feature-box i {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .quote {
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .founder {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .quote-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .founder-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-top: 10px;
+            border: 3px solid white;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .desktop-only {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .desktop-only {
+                display: block;
+                margin-top: 10px;
+                font-size: 16px;
+                text-align: center;
+                opacity: 0.8;
+            }
+        }
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #d5e4f4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ebeef2;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    position: relative;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #1e0505;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #0a4ec3;
+  }
+  
+  .cta-btn {
+    background: linear-gradient(135deg, #004AAD, #007BFF);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background: linear-gradient(135deg, #003A8C, #005FCC);
+    transform: scale(1.01);
+    box-shadow: 0px 6px 20px rgba(0, 91, 204, 0.7);
+  }
+  
+  /* Mobile Menu */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 5%;
+      background:#0A2540;
+      width: 200px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      
+    }
+    
+    .nav-links a {
+      padding: 10px;
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  .logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+  }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <!-- <div class="logo">Suvidha</div> -->
+        <div class="logo">
+         <a href="index.html"> <img src="suvidha-removebg-preview.png" alt="Suvidha Logo"></a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html">About</a>
+          <!-- <a href="#services">Services</a> -->
+          <!-- <a href="#how-it-works">How It Works</a> -->
+          <!-- <a href="#contact">Contact</a> -->
+          <a href="#blog">Blog</a>
+          <button class="cta-btn">Join the Waitlist</button>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </header>
+
+    <div class="container">
+        <h2 style="font-size: 40px; font-weight: 700;">About Us</h2>
+        
+        <div class="about-section">
+            <div class="about-img">
+                <img src="https://thumbs.dreamstime.com/b/work-has-him-stressed-out-businessman-using-laptop-272218520.jpg" alt="Suvidha Connecting NRIs and Financial Experts">
+            </div>
+            <div class="about-text">
+                <p style="font-size: 20px; font-weight: 300;">
+                   At <b>Suvidha</b>, we understand the challenges of managing important financial tasks in India while being miles away. Whether it’s property matters, tax compliance, or investment planning, navigating these processes can feel overwhelming, confusing, and even risky.
+                </p>
+            </div>
+           
+        </div>
+        <div class="dotted-connection"></div>
+        
+        
+        <div class="about-section">
+           
+            <div class="about-text">
+                <p style="font-size: 20px; font-weight: 300;">
+                    We simplify this journey by connecting NRIs with experienced financial professionals in India. Our platform ensures seamless access to reliable experts who can assist with tax filings, property management, wealth planning, and more—giving you peace of mind, no matter where you are.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://img.freepik.com/premium-photo/close-up-portrait-confident-indian-financial-expert-office-worker-sitting-table-formal-suit_769609-327.jpg" alt="Seamless Financial Support">
+            </div>
+        </div>
+    </div>
+    <h2 style="font-size: 36px; font-weight: 700;">At Suvidha you get</h2>
+    <div class="features">
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure Financial Solutions</span>
+            <p class="desktop-only">Trusted Network: We carefully verify and partner with experienced professionals across India, so you don’t have to worry about unreliable providers.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-user-tie"></i>
+            <span>Expert Advisory Services</span>
+            <p class="desktop-only">One Platform: Share your needs with us, and we match you with the right expert for your situation – no endless searches or middlemen.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Hassle-Free Transactions</span>
+            <p class="desktop-only">Transparent Process: Track progress, communicate directly, and get clear updates – all in one place.</p>
+        </div>
+    </div>
+    
+    <div class="quote-container">
+        <p class="quote">"Empowering NRIs with financial freedom, no matter where they are in the world."</p>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEkkMv1UKyFqw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731599921053?e=1746662400&v=beta&t=8QLlWniNr1h21aQDdEqFtEDo0CnDLs5tliXqDXo5Psg" alt="Founder Image" class="founder-img">
+        <div class="founder">- GAURAV RAJPAL,Founder & CEO</div>
+    </div>
+</div>
+<footer style="background-color: #0A1E40; color: #fff; padding: 40px 10%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-family: Arial, sans-serif;">
+  <div style="max-width: 45%;">
+      <h2 style="margin: 0; font-size: 26px; font-weight: bold;">Suvidha</h2>
+      <p style="margin: 5px 0 15px; font-size: 14px;">Suvidha Technologies Private Limited</p>
+      <p style="margin: 5px 0; font-size: 14px;"><strong>Registered Address:</strong> XYZ Tower, Business Hub, Mumbai - 400001</p>
+      <p style="margin: 5px 0; font-size: 14px;">CIN: UXXXXXXXXX2025PTCXXXXX</p>
+      <p style="margin-top: 15px;">
+          <a href="#" style="color: #A0C3FF; text-decoration: none; font-size: 14px; margin-right: 15px;">Privacy Policy</a>
+          <a href="#" style="color: #A0C3FF; text-decoration: none; font-size: 14px;">Terms & Conditions</a>
+      </p>
+  </div>
+  <div style="text-align: right; max-width: 50%;">
+      <h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600;">Global Financial Services for NRIs – made in India with ❤️</h3>
+      <p style="margin: 5px 0 15px; font-size: 14px;">Follow us on:</p>
+      <p>
+          <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="22" style="margin-right: 10px;"></a>
+          <a href="#"><img src="twitter-icon.png" alt="X" width="22" style="margin-right: 10px;"></a>
+          <a href="#"><img src="instagram-icon.png" alt="Instagram" width="22"></a>
+      </p>
+      <p style="margin-top: 15px;">
+          <img src="ifsca-logo.png" alt="IFSCA" width="50" style="margin-right: 10px;">
+          <img src="rbi-logo.png" alt="RBI" width="50" style="margin-right: 10px;">
+          <img src="iso-logo.png" alt="ISO 27001 Certified" width="50">
+      </p>
+  </div>
+</footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>
